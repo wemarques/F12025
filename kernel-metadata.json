@@ -1,0 +1,26 @@
+{
+  "id": "jtrotman/f1-race-traces-2021",
+  "id_no": 16086825,
+  "title": "F1 Race Traces \u2014 2021 \ud83c\udfc1",
+  "code_file": "f1-race-traces-2021.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": false,
+  "enable_gpu": false,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "keywords": [
+    "auto racing",
+    "data visualization",
+    "exploratory data analysis",
+    "history",
+    "sports"
+  ],
+  "dataset_sources": [
+    "jtrotman/formula-1-race-data",
+    "jtrotman/formula-1-race-events"
+  ],
+  "kernel_sources": [],
+  "competition_sources": [],
+  "model_sources": []
+}
