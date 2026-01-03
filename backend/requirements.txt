@@ -1,0 +1,14 @@
+fastapi
+uvicorn
+streamlit
+scikit-learn
+fastf1
+kaggle
+pandas
+numpy
+pyyaml
+requests
+joblib
+python-multipart
+python-jose[cryptography]
+passlib[bcrypt]

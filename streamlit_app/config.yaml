@@ -1,0 +1,12 @@
+credentials:
+  usernames:
+    admin:
+      name: "Admin User"
+      password: "password123"
+    user:
+      name: "Regular User"
+      password: "user123"
+cookie:
+  name: "f12025_auth"
+  key: "random_signature_key"
+  expiry_days: 1
