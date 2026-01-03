@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pkl
+*.pyc
+
+# Virtual env
+venv/
+.env
+
+# Streamlit
+.streamlit/
+streamlit_app/config.yaml
+
+# Data
+data/raw/
+data/processed/
+data/external/
+*.csv
+*.zip
+
+# IDE
+.vscode/
+.idea/
+
+# FastF1 cache
+fastf1_cache/
+f1_race_traces_2021/data/fastf1_cache/
+
+# Notebooks
+.ipynb_checkpoints/
