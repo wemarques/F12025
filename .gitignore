@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pkl
+venv/
+.env
+
+# Streamlit
+.streamlit/
+streamlit_app/config.yaml
+
+# Data
+data/raw/
+data/processed/
+data/external/
+*.csv
+*.zip
+
+# IDE
+.vscode/
+.idea/
