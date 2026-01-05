@@ -102,3 +102,4 @@ def get_constructor_by_id(constructor_id: str) -> pd.Series:
     
     return constructor.iloc[0]
 
+

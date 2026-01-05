@@ -67,3 +67,4 @@ def optimize_team(request: OptimizeRequest) -> Dict:
             detail=f"Erro ao otimizar time: {str(e)}"
         )
 
+

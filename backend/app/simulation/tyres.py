@@ -104,3 +104,4 @@ class TyreModel:
         """Retorna lista de compostos para condições molhadas."""
         return [TyreCompound.INTER, TyreCompound.WET]
 
+

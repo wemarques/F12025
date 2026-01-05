@@ -30,3 +30,4 @@ def get_api_base_url():
 # Exporta a URL da API
 API_BASE_URL = get_api_base_url()
 
+

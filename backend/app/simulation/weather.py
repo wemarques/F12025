@@ -91,3 +91,4 @@ class WeatherEngine:
         # Sem chuva
         return WeatherCondition.DRY
 
+

@@ -66,3 +66,4 @@ def validate_team(drivers: List[str], constructors: List[str], prices_data: List
     
     return True, "Time válido!"
 
+
