@@ -2,31 +2,72 @@
 __pycache__/
 *.py[cod]
 *$py.class
-*.pkl
-*.pyc
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
 
-# Virtual env
+# Virtual Environment
 venv/
-.env
-
-# Streamlit
-.streamlit/
-streamlit_app/config.yaml
-
-# Data
-data/raw/
-data/processed/
-data/external/
-*.csv
-*.zip
+env/
+ENV/
+.venv
 
 # IDE
 .vscode/
 .idea/
+*.swp
+*.swo
+*~
+.DS_Store
 
-# FastF1 cache
-fastf1_cache/
-f1_race_traces_2021/data/fastf1_cache/
+# Streamlit
+.streamlit/
 
-# Notebooks
+# FastF1 Cache
+backend/cache/
+*.f1/
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Logs
+*.log
+logs/
+
+# Environment variables
+.env
+.env.local
+
+# Jupyter Notebooks
 .ipynb_checkpoints/
+*.ipynb
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Data files (opcional - descomente se quiser ignorar dados grandes)
+# backend/data/*.json
+# *.csv
+# *.xlsx
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
