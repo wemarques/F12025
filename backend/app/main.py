@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from app.core.config import settings
 from app.api import pilotos, prognosticos, corridas
-from app.api.endpoints import analytics, optimization, simulation, fantasy
+from app.api.endpoints import analytics, optimization, simulation, fantasy, data_updater
 import uvicorn
 
 app = FastAPI(title=settings.PROJECT_NAME, version=settings.PROJECT_VERSION)
@@ -14,6 +14,7 @@ app.include_router(analytics.router, prefix="/api/v1/analytics", tags=["analytic
 app.include_router(optimization.router, prefix="/api/v1/optimization", tags=["optimization"])
 app.include_router(simulation.router, prefix="/api/v1/simulation", tags=["simulation"])
 app.include_router(fantasy.router, prefix="/api/v1/fantasy", tags=["fantasy"])
+app.include_router(data_updater.router, prefix="/api/v1/data", tags=["data-updater"])
 
 @app.get("/")
 def read_root():
