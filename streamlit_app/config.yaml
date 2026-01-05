@@ -1,12 +1,15 @@
 credentials:
   usernames:
     admin:
-      name: "Admin User"
-      password: "password123"
-    user:
-      name: "Regular User"
-      password: "user123"
+      email: "admin@example.com"
+      name: "Administrador"
+      password: "1234"   # senha simples só para testes
+
 cookie:
-  name: "f12025_auth"
-  key: "random_signature_key"
   expiry_days: 1
+  key: "f1fantasy2025"
+  name: "f1fantasy_cookie"
+
+preauthorized:
+  emails:
+    - "admin@example.com"
