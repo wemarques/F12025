@@ -14,9 +14,7 @@ backend_path = Path(__file__).parent.parent.parent / "backend"
 sys.path.insert(0, str(backend_path))
 
 from app.services.fantasy_rules import validate_team
-
-# Configuração da API
-API_BASE_URL = "http://localhost:8000"
+from config_env import API_BASE_URL
 
 # Constantes
 TOTAL_BUDGET = 100.0

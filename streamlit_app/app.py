@@ -11,6 +11,7 @@ sys.path.append(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'backen
 from auth import Authenticator
 from components.charts import render_telemetry_chart, render_simulation_results
 from components.team_builder import render_team_builder
+from config_env import API_BASE_URL
 
 # Configuração da Página
 st.set_page_config(page_title="F1 2025 Fantasy Projections", layout="wide", page_icon="🏎️")
@@ -108,9 +109,6 @@ elif page == "Prognóstico por Piloto":
 elif page == "Simulação de Time":
     st.title("🛠️ Simulação de Time Fantasy")
     st.markdown("Monte seu time ideal e verifique a viabilidade orçamentária.")
-    
-    # Configuração da API
-    API_BASE_URL = "http://localhost:8000"
     
     # Lista de Grandes Prêmios 2025
     gp_options = [
@@ -233,9 +231,6 @@ elif page == "⚔️ Comparativo de Pilotos":
     st.title("⚔️ Comparativo de Pilotos")
     st.markdown("Compare a telemetria de dois pilotos em uma sessão específica.")
     
-    # Configuração da API
-    API_BASE_URL = "http://localhost:8000"
-    
     # Lista de Grandes Prêmios (exemplos)
     gp_options = [
         "Bahrain", "Saudi Arabia", "Australia", "Japan", "China", "Miami",
@@ -316,9 +311,6 @@ elif page == "🏗️ Montar Time":
 elif page == "🔮 Simulação de Corrida":
     st.title("🔮 Simulação de Corrida")
     st.markdown("Execute simulações Monte Carlo para prever resultados de corridas.")
-    
-    # Configuração da API
-    API_BASE_URL = "http://localhost:8000"
     
     # Lista de Grandes Prêmios 2025
     gp_options = [
@@ -495,9 +487,6 @@ elif page == "🔮 Simulação de Corrida":
 elif page == "🔮 Simulador Monte Carlo":
     st.title("🔮 Simulador Monte Carlo")
     st.markdown("Execute simulações Monte Carlo usando dados reais do FastF1 para prever resultados de corridas.")
-    
-    # Configuração da API
-    API_BASE_URL = "http://localhost:8000"
     
     # Lista de anos disponíveis
     year_options = [2024, 2023, 2022, 2021]
