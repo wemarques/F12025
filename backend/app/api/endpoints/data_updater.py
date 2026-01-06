@@ -365,3 +365,46 @@ async def get_update_status():
         }
     finally:
         db.close()
+
+
+@router.post("/init-database", status_code=200)
+async def init_database():
+    """
+    Endpoint para inicializar o banco de dados criando todas as tabelas.
+    
+    Este endpoint deve ser chamado apenas uma vez após o deploy inicial
+    ou quando houver mudanças nos modelos que exijam recriação das tabelas.
+    
+    Returns:
+        dict: Mensagem de confirmação com lista de tabelas criadas
+    
+    Raises:
+        HTTPException: Se houver erro ao criar as tabelas
+    """
+    try:
+        from database.database import Base, engine
+        from sqlalchemy import inspect
+        
+        logger.info("Iniciando criação das tabelas no banco de dados...")
+        
+        # Cria todas as tabelas
+        Base.metadata.create_all(bind=engine)
+        
+        # Verifica as tabelas criadas
+        inspector = inspect(engine)
+        tables = inspector.get_table_names()
+        
+        logger.info(f"✓ {len(tables)} tabelas criadas com sucesso")
+        
+        return {
+            "message": "Banco de dados inicializado com sucesso!",
+            "tables_created": len(tables),
+            "tables": sorted(tables)
+        }
+        
+    except Exception as e:
+        logger.error(f"✗ Erro ao inicializar banco de dados: {str(e)}")
+        raise HTTPException(
+            status_code=500,
+            detail=f"Erro ao inicializar banco de dados: {str(e)}"
+        )

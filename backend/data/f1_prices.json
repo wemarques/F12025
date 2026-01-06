@@ -19,9 +19,9 @@
     "id": "HAM",
     "name": "Lewis Hamilton",
     "type": "DRIVER",
-    "price": 21.0,
-    "team": "Mercedes",
-    "expected_points": 18.5
+    "price": 22.0,
+    "team": "Ferrari",
+    "expected_points": 19.5
   },
   {
     "id": "LEC",
@@ -51,31 +51,31 @@
     "id": "SAI",
     "name": "Carlos Sainz",
     "type": "DRIVER",
-    "price": 19.0,
-    "team": "Ferrari",
-    "expected_points": 16.0
+    "price": 17.0,
+    "team": "Williams",
+    "expected_points": 14.0
   },
   {
     "id": "PER",
     "name": "Sergio Perez",
     "type": "DRIVER",
-    "price": 17.0,
+    "price": 16.0,
     "team": "Red Bull",
-    "expected_points": 14.0
+    "expected_points": 13.0
   },
   {
     "id": "ALO",
     "name": "Fernando Alonso",
     "type": "DRIVER",
-    "price": 16.0,
+    "price": 15.0,
     "team": "Aston Martin",
-    "expected_points": 12.5
+    "expected_points": 12.0
   },
   {
     "id": "ALB",
     "name": "Alexander Albon",
     "type": "DRIVER",
-    "price": 14.0,
+    "price": 13.0,
     "team": "Williams",
     "expected_points": 10.0
   },
@@ -83,17 +83,17 @@
     "id": "GAS",
     "name": "Pierre Gasly",
     "type": "DRIVER",
-    "price": 13.0,
+    "price": 12.0,
     "team": "Alpine",
     "expected_points": 9.0
   },
   {
-    "id": "OCO",
-    "name": "Esteban Ocon",
+    "id": "DOO",
+    "name": "Jack Doohan",
     "type": "DRIVER",
-    "price": 12.0,
+    "price": 9.0,
     "team": "Alpine",
-    "expected_points": 8.5
+    "expected_points": 7.0
   },
   {
     "id": "TSU",
@@ -104,8 +104,8 @@
     "expected_points": 8.0
   },
   {
-    "id": "RIC",
-    "name": "Daniel Ricciardo",
+    "id": "LAW",
+    "name": "Liam Lawson",
     "type": "DRIVER",
     "price": 10.0,
     "team": "RB",
@@ -123,9 +123,17 @@
     "id": "HUL",
     "name": "Nico Hulkenberg",
     "type": "DRIVER",
+    "price": 10.0,
+    "team": "Sauber",
+    "expected_points": 7.0
+  },
+  {
+    "id": "BEA",
+    "name": "Oliver Bearman",
+    "type": "DRIVER",
     "price": 8.0,
     "team": "Haas",
-    "expected_points": 5.0
+    "expected_points": 5.5
   },
   {
     "id": "MAG",
@@ -139,25 +147,17 @@
     "id": "STR",
     "name": "Lance Stroll",
     "type": "DRIVER",
-    "price": 6.0,
+    "price": 8.0,
     "team": "Aston Martin",
-    "expected_points": 4.0
+    "expected_points": 6.0
   },
   {
-    "id": "ZHO",
-    "name": "Zhou Guanyu",
+    "id": "ANT",
+    "name": "Andrea Kimi Antonelli",
     "type": "DRIVER",
-    "price": 6.5,
-    "team": "Sauber",
-    "expected_points": 4.2
-  },
-  {
-    "id": "SAR",
-    "name": "Logan Sargeant",
-    "type": "DRIVER",
-    "price": 5.0,
-    "team": "Williams",
-    "expected_points": 2.0
+    "price": 11.0,
+    "team": "Mercedes",
+    "expected_points": 8.5
   },
   {
     "id": "RBR",
@@ -187,33 +187,33 @@
     "id": "MER",
     "name": "Mercedes",
     "type": "CONSTRUCTOR",
-    "price": 23.0,
+    "price": 21.0,
     "team": "Mercedes",
-    "expected_points": 21.0
+    "expected_points": 19.0
   },
   {
     "id": "AST",
     "name": "Aston Martin",
     "type": "CONSTRUCTOR",
-    "price": 18.0,
+    "price": 16.0,
     "team": "Aston Martin",
-    "expected_points": 16.0
+    "expected_points": 14.0
   },
   {
     "id": "ALP",
     "name": "Alpine",
     "type": "CONSTRUCTOR",
-    "price": 15.0,
+    "price": 13.0,
     "team": "Alpine",
-    "expected_points": 13.0
+    "expected_points": 11.0
   },
   {
     "id": "WIL",
     "name": "Williams",
     "type": "CONSTRUCTOR",
-    "price": 12.0,
+    "price": 14.0,
     "team": "Williams",
-    "expected_points": 10.0
+    "expected_points": 12.0
   },
   {
     "id": "RB",
@@ -235,8 +235,8 @@
     "id": "SAU",
     "name": "Sauber",
     "type": "CONSTRUCTOR",
-    "price": 6.0,
+    "price": 9.0,
     "team": "Sauber",
-    "expected_points": 5.0
+    "expected_points": 8.0
   }
 ]
