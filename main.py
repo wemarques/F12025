@@ -1,11 +1,14 @@
+import sys
+import os
+from pathlib import Path
+
+# Add backend directory to Python path
+backend_path = Path(__file__).parent / "backend"
+sys.path.insert(0, str(backend_path))
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import logging
-import sys
-import os
-
-# Add backend directory to Python path
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'backend'))
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -47,19 +50,48 @@ try:
 except Exception as e:
     logger.warning(f"Could not import legacy routers: {e}")
 
-# Try to import new endpoint routers
+# Try to import new endpoint routers INDIVIDUALLY
+# This allows some routers to work even if others fail
+
+# Analytics router (depends on fastf1)
 try:
-    from app.api.endpoints import analytics, optimization, simulation, fantasy, data_updater
-    routers_to_register.extend([
-        (analytics.router, "/api/v1/analytics", ["analytics"]),
-        (optimization.router, "/api/v1/optimization", ["optimization"]),
-        (simulation.router, "/api/v1/simulation", ["simulation"]),
-        (fantasy.router, "/api/v1/fantasy", ["fantasy"]),
-        (data_updater.router, "/api/v1/data", ["data-updater"]),
-    ])
-    logger.info("✓ New endpoint routers imported successfully")
+    from app.api.endpoints import analytics
+    routers_to_register.append((analytics.router, "/api/v1/analytics", ["analytics"]))
+    logger.info("✓ Analytics router imported")
 except Exception as e:
-    logger.warning(f"Could not import new endpoint routers: {e}")
+    logger.warning(f"Could not import analytics router: {e}")
+
+# Optimization router (depends on fantasy_data)
+try:
+    from app.api.endpoints import optimization
+    routers_to_register.append((optimization.router, "/api/v1/optimization", ["optimization"]))
+    logger.info("✓ Optimization router imported")
+except Exception as e:
+    logger.warning(f"Could not import optimization router: {e}")
+
+# Simulation router
+try:
+    from app.api.endpoints import simulation
+    routers_to_register.append((simulation.router, "/api/v1/simulation", ["simulation"]))
+    logger.info("✓ Simulation router imported")
+except Exception as e:
+    logger.warning(f"Could not import simulation router: {e}")
+
+# Fantasy router (uses fantasy_optimizer)
+try:
+    from app.api.endpoints import fantasy
+    routers_to_register.append((fantasy.router, "/api/v1/fantasy", ["fantasy"]))
+    logger.info("✓ Fantasy router imported")
+except Exception as e:
+    logger.warning(f"Could not import fantasy router: {e}")
+
+# Data updater router (depends on fastf1)
+try:
+    from app.api.endpoints import data_updater
+    routers_to_register.append((data_updater.router, "/api/v1/data", ["data-updater"]))
+    logger.info("✓ Data updater router imported")
+except Exception as e:
+    logger.warning(f"Could not import data_updater router: {e}")
 
 # Register all successfully imported routers
 for router, prefix, tags in routers_to_register:
